@@ -16,26 +16,26 @@ function asignarColor(arr) {
   if (arr[0] === "corazon" || arr[0] === "diamante") {
     simboloArriba.style.color = "red";
     numero.style.color = "red";
-    simboloArriba.style.color = "red";
+    simboloAbajo.style.color = "red";
   } else {
     simboloArriba.style.color = "black";
     numero.style.color = "black";
-    simboloArriba.style.color = "black";
+    simboloAbajo.style.color = "black";
   }
 }
 function asignarPalo(arr) {
   if (arr[0] === "corazon") {
     simboloArriba.innerHTML = "♥";
-    simboloArriba.innerHTML = "♥";
+    simboloAbajo.innerHTML = "♥";
   } else if (arr[0] === "diamante") {
     simboloArriba.innerHTML = "♦";
-    simboloArriba.innerHTML = "♦";
+    simboloAbajo.innerHTML = "♦";
   } else if (arr[0] === "trebol") {
     simboloArriba.innerHTML = "♣";
-    simboloArriba.innerHTML = "♣";
+    simboloAbajo.innerHTML = "♣";
   } else {
     simboloArriba.innerHTML = "♠";
-    simboloArriba.innerHTML = "♠";
+    simboloAbajo.innerHTML = "♠";
   }
 }
 function asignarValor(arr) {
@@ -43,10 +43,12 @@ function asignarValor(arr) {
 }
 function generacionCarta() {
   let carta = eleccionCarta(palos, valores);
-  asignarColor(carta);
+  asignarColor(carta) = red;
   asignarPalo(carta);
   asignarValor(carta);
+  
 }
+let cartaContainer = document.getElementById("cartaContainer");
 
 window.onload = function() {
   generacionCarta();
